@@ -46,7 +46,7 @@ export const Topics: React.FC = () => {
     }, [articles]);
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-12 min-h-[60vh]">
+        <div className="max-w-6xl mx-auto pt-32 px-4 py-12 min-h-[60vh]">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Explore Topics</h1>
             <p className="text-gray-600 text-lg mb-10">
                 This is where we will display a grid of all available categories and featured articles for each.
