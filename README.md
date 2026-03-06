@@ -1,6 +1,7 @@
 # 📰 ArticleHub
 
 ArticleHub is a modern, high-performance article discovery platform built with **React**, **TypeScript**, and **Vite**. The application features are dynamic filtering, and custom pagination.
+
 Link to live app: https://article-hub-one.vercel.app/
 
 
