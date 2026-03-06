@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { ArticleDetail } from './pages/ArticleDetail';
@@ -7,36 +7,11 @@ import { About } from './pages/About';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 
-type ThemeContextType = {
-  isDarkMode: boolean;
-  toggleTheme: () => void;
-};
-export const ThemeContext = createContext<ThemeContextType>({ isDarkMode: false, toggleTheme: () => { } });
 
 const App: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    }
-    return false;
-  });
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (isDarkMode) {
-      root.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      root.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDarkMode]);
-
-  const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+    <>
       <Router>
         <div className="min-h-screen flex flex-col bg-gray-50 font-sans text-gray-900">
           <Header />
@@ -51,7 +26,8 @@ const App: React.FC = () => {
           <Footer />
         </div>
       </Router>
-    </ThemeContext.Provider>
+    </>
+
   );
 };
 
