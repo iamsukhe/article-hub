@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
     return (
-        <footer className="bg-[#668077] dark:bg-gray-950 text-white py-12 border-t border-[#556b63] dark:border-gray-900 transition-colors duration-300">
+        <footer className="bg-gray-950 dark:bg-gray-950 text-white py-12 border-t border-gray-900 dark:border-gray-900 transition-colors duration-300">
             <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div className="col-span-1 md:col-span-2">
                     <Link to="/" className="text-2xl font-black tracking-tight text-white mb-4 inline-block hover:text-[#FFC44D] transition-colors">
