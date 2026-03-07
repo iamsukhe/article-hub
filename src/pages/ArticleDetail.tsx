@@ -43,7 +43,6 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({ isDarkMode }) => {
             <h1 className={`text-3xl md:text-5xl font-extrabold mb-8 leading-tight tracking-tight ${isDarkMode ? 'text-white' : 'text-[#668077]'}`}>{article.title}</h1>
 
             <div className={`prose prose-lg leading-relaxed mb-12 max-w-none ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                {/* Rendering plain text or HTML string for content */}
                 <div dangerouslySetInnerHTML={{ __html: article.content }} />
             </div>
 
