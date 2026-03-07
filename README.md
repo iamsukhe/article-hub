@@ -65,7 +65,7 @@ Unlike standard Tailwind implementations that rely on the `dark:` selector globa
 
 ## 🌐 API Configuration
 
-To switch between your local backend and the production API, modify the `API_BASE_URL` in `src/services/api.ts`:
+To switch between your local backend and the production API, modify the `API_BASE_URL` in `src/services/api.tsx`:
 
 - **Local Backend**: `http://localhost:5000/api`
 - **Production API**: `https://article-hub-backend-xi.vercel.app/api`
