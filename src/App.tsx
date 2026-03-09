@@ -6,6 +6,7 @@ import { Topics } from './pages/Topics';
 import { About } from './pages/About';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { NotFound } from './pages/NotFound';
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -28,6 +29,9 @@ const App: React.FC = () => {
           <Route path="/articles/:id" element={<ArticleDetail isDarkMode={isDarkMode} />} />
           <Route path="/topics" element={<Topics isDarkMode={isDarkMode} />} />
           <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
+
+          {/* Catch-all route for any undefined paths */}
+          <Route path="*" element={<NotFound isDarkMode={isDarkMode} />} />
         </Routes>
       </main>
       <Footer />
